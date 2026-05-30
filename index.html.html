@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+<title>Für Emely 🎀🕷️</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Nunito:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --black:#08010f;
+  --red:#e63946;
+  --neon:#c77dff;
+  --pink:#ff87c3;
+  --hotpink:#ff3fa4;
+  --cream:#fff5fa;
+  --yellow:#ffe566;
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--black);
+  color:var(--cream);
+  font-family:'Nunito',sans-serif;
+  overflow-x:hidden;
+}
+body::before{
+  content:'';position:fixed;inset:0;
+  background-image:radial-gradient(circle,rgba(199,125,255,.13) 1px,transparent 1px);
+  background-size:20px 20px;
+  pointer-events:none;z-index:0;
+}
+.web-bg{position:fixed;inset:0;pointer-events:none;z-index:0;opacity:.06;width:100%;height:100%;}
+.particles{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.spark{position:absolute;top:-30px;animation:fall linear infinite;opacity:0;}
+@keyframes fall{0%{transform:translateY(0) rotate(0deg);opacity:.85}100%{transform:translateY(108vh) rotate(720deg);opacity:0}}
+
+.page{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  padding:60px 24px;position:relative;z-index:2;
+  text-align:center;gap:24px;
+}
+
+/* ══ HERO ══ */
+#hero{background:radial-gradient(ellipse at 50% 25%,#2a0045 0%,#08010f 65%);}
+.badge{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:.9rem;letter-spacing:.3em;color:var(--pink);
+  text-shadow:0 0 14px var(--hotpink);
+  animation:fadeUp .7s ease both;
+}
+.hero-gif{
+  width:min(200px,52vw);height:min(200px,52vw);
+  border-radius:50%;border:3px solid var(--pink);
+  box-shadow:0 0 28px rgba(199,125,255,.55),0 0 8px rgba(255,135,195,.4);
+  animation:fadeUp .8s .15s ease both,floatY 4s 1s ease-in-out infinite;
+  object-fit:cover;display:block;
+}
+@keyframes floatY{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+
+/* ── HERO NAME: E white, MELY pink, both Bangers ── */
+.hero-name{
+  font-family:'Bangers',cursive;
+  font-size:clamp(4.5rem,15vw,9rem);
+  letter-spacing:.07em;line-height:1;
+  animation:fadeUp .9s .25s ease both;
+  display:block; /* simple block, no flex tricks */
+}
+.hero-name .e{
+  font-family:'Bangers',cursive;
+  color:var(--cream);
+  text-shadow:4px 4px 0 var(--red),9px 9px 0 var(--neon),0 0 50px rgba(199,125,255,.45);
+}
+.hero-name .mely{
+  font-family:'Bangers',cursive;
+  color:var(--pink);
+  text-shadow:4px 4px 0 var(--hotpink),0 0 28px var(--pink);
+}
+
+.hero-sub{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(1rem,3vw,1.4rem);color:var(--neon);
+  letter-spacing:.06em;animation:fadeUp 1s .4s ease both;
+}
+.scroll-hint{
+  font-size:.72rem;letter-spacing:.25em;color:var(--pink);opacity:.65;
+  animation:fadeUp 1s .8s ease both,blink 2.2s 1.6s ease-in-out infinite;
+}
+@keyframes blink{0%,100%{opacity:.35}50%{opacity:.9}}
+
+/* ══ QUESTION ══ */
+#question{background:linear-gradient(165deg,#1a0030 0%,#08010f 55%,#1c0010 100%);}
+.comic-panel{
+  border:2.5px solid var(--pink);border-radius:20px;
+  background:rgba(255,135,195,.06);
+  padding:28px 30px;max-width:580px;width:100%;
+  box-shadow:6px 6px 0 var(--neon),0 0 48px rgba(255,63,164,.18);
+  position:relative;animation:fadeUp .8s ease both;
+}
+.comic-panel::before{content:'💬';position:absolute;top:-24px;left:22px;font-size:2rem;}
+.qlabel{font-family:'Bangers',cursive;font-size:.85rem;letter-spacing:.35em;color:var(--yellow);margin-bottom:12px;}
+.qtext{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,4vw,2.2rem);line-height:1.4;color:var(--cream);}
+.qtext em{color:var(--pink);font-style:italic;}
+.mascot-gif{
+  width:min(120px,32vw);height:min(120px,32vw);
+  border-radius:50%;border:2.5px solid var(--pink);
+  box-shadow:0 0 18px rgba(199,125,255,.5);
+  animation:floatY 3.5s ease-in-out infinite;
+  object-fit:cover;display:block;
+}
+
+/* ── BUTTONS ── */
+.btn-row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;align-items:center;animation:fadeUp 1s .5s ease both;}
+#yesBtn{
+  font-family:'Bangers',cursive;
+  font-size:clamp(1.5rem,4.5vw,1.9rem);letter-spacing:.08em;
+  padding:16px clamp(36px,8vw,58px);
+  border:none;border-radius:50px;
+  background:linear-gradient(135deg,var(--hotpink),var(--red));
+  color:#fff;cursor:pointer;
+  box-shadow:4px 4px 0 #fff,0 8px 34px rgba(255,63,164,.55);
+  transition:transform .2s,box-shadow .2s,font-size .4s cubic-bezier(.34,1.56,.64,1),padding .4s cubic-bezier(.34,1.56,.64,1);
+  text-shadow:2px 2px 0 rgba(0,0,0,.25);white-space:nowrap;
+}
+#yesBtn:hover{transform:scale(1.07);}
+#yesBtn:active{transform:scale(.96);}
+#noBtn{
+  font-family:'Bangers',cursive;font-size:clamp(1rem,3.5vw,1.4rem);letter-spacing:.06em;
+  padding:14px clamp(20px,6vw,38px);
+  border:2.5px solid var(--neon);border-radius:50px;
+  background:transparent;color:var(--neon);cursor:pointer;
+  box-shadow:3px 3px 0 var(--neon);
+  transition:font-size .4s,padding .4s,opacity .4s,color .4s,border-color .4s,box-shadow .4s;
+  white-space:nowrap;
+}
+.shy-hint{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:.9rem;color:var(--pink);
+  min-height:1.4em;opacity:0;transition:opacity .3s;
+}
+.shy-hint.show{opacity:1;}
+
+/* ══ YES SCREEN ══ */
+#yes-screen{
+  display:none;position:fixed;inset:0;z-index:100;
+  background:#08010f;
+  flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:40px 20px;gap:14px;
+  animation:fadeIn .55s ease;
+  overflow-y:auto;-webkit-overflow-scrolling:touch;
+}
+#yes-screen.active{display:flex;}
+#yes-screen > *{position:relative;z-index:1;}
+.yes-emoji{font-size:clamp(1.4rem,4vw,2rem);animation:blink 1.6s ease-in-out infinite;}
+.yes-title{
+  font-family:'Bangers',cursive;
+  font-size:clamp(2.4rem,8vw,5.5rem);
+  color:var(--cream);line-height:1.05;
+  text-shadow:5px 5px 0 var(--hotpink),11px 11px 0 var(--neon),0 0 60px var(--pink);
+}
+.yes-sub{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(.95rem,2.8vw,1.4rem);color:var(--neon);max-width:440px;
+}
+
+/* ─────────────────────────────────────────────────
+   ZUS BLOCK: gif on top, arrow below pointing UP at gif
+   Arrow tip is at the TOP of the SVG pointing upward.
+   "zus." sits below the arrow tail.
+───────────────────────────────────────────────── */
+.zus-block{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:0;
+}
+.yes-gif{
+  width:min(160px,42vw);height:min(160px,42vw);
+  border-radius:50%;border:3px solid var(--pink);
+  box-shadow:0 0 28px rgba(199,125,255,.7);
+  object-fit:cover;display:block;
+  animation:floatY 3.5s ease-in-out infinite;
+}
+/*
+  Arrow SVG: drawn so the POINTY TIP is at the top-center,
+  the tail fans out at the bottom — i.e. arrow points UPWARD.
+  This way it always aims at the gif sitting above it.
+
+  You can tweak arrow position with these CSS vars:
+  --arrow-w  : width of the arrow (default min(180px,48vw))
+  --arrow-mt : margin-top gap between gif and arrow (default -8px)
+  --zus-mt   : margin-top below arrow for "zus." label (default 2px)
+  --zus-rot  : rotation of "zus." label (default -7deg)
+*/
+:root{
+  --arrow-w: min(180px, 48vw);
+  --arrow-mt: -8px;
+  --zus-mt: 2px;
+  --zus-rot: -7deg;
+}
+.yes-arrow-svg{
+  width:var(--arrow-w);
+  margin-top:var(--arrow-mt);
+  filter:drop-shadow(0 0 8px rgba(255,63,164,.6));
+  display:block;
+}
+.zus-label{
+  font-family:'Bangers',cursive;
+  font-size:clamp(2rem,7vw,3.2rem);
+  color:var(--red);
+  text-shadow:2px 2px 0 var(--hotpink),0 0 18px rgba(255,63,164,.6);
+  transform:rotate(var(--zus-rot));
+  display:block;
+  margin-top:var(--zus-mt);
+  line-height:1;
+}
+
+/* ── TIMESTAMP ── */
+.timestamp-box{
+  font-family:'Bangers',cursive;
+  font-size:clamp(.82rem,2.4vw,1.15rem);
+  letter-spacing:.08em;color:var(--yellow);
+  text-shadow:1px 1px 0 var(--hotpink),0 0 12px rgba(255,230,102,.5);
+  background:rgba(255,135,195,.07);
+  border:2px solid var(--pink);border-radius:14px;
+  padding:10px 18px;box-shadow:3px 3px 0 var(--neon);
+  max-width:88vw;word-break:break-word;
+  animation:fadeUp 1s .8s ease both;
+}
+
+/* ══ LOVE NOTE ══ */
+#lovenote{background:linear-gradient(165deg,#1a0030 0%,#08010f 100%);}
+.note-card{
+  max-width:500px;width:100%;
+  background:rgba(255,135,195,.065);
+  border:2px solid var(--pink);border-radius:22px;
+  padding:46px 28px 36px;position:relative;
+  box-shadow:6px 6px 0 var(--neon),0 0 48px rgba(199,125,255,.13);
+  animation:fadeUp 1s .25s ease both;
+}
+.note-ribbon{
+  position:absolute;top:-20px;left:50%;transform:translateX(-50%);
+  background:linear-gradient(135deg,var(--hotpink),var(--red));
+  color:#fff;padding:6px 22px;border-radius:50px;
+  font-family:'Bangers',cursive;font-size:1rem;letter-spacing:.12em;
+  box-shadow:3px 3px 0 var(--neon);white-space:nowrap;
+}
+.note-body{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(.95rem,2.6vw,1.2rem);line-height:1.85;color:var(--cream);margin-top:8px;
+}
+.note-sign{
+  margin-top:22px;font-family:'Bangers',cursive;font-size:1.3rem;
+  color:var(--pink);letter-spacing:.1em;text-shadow:2px 2px 0 var(--hotpink);
+}
+.note-divider{width:60px;height:2px;background:linear-gradient(90deg,transparent,var(--neon),transparent);margin:14px auto 0;}
+.copy-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 32px;border:2px solid var(--neon);border-radius:50px;
+  background:transparent;color:var(--neon);
+  font-family:'Bangers',cursive;font-size:1.1rem;letter-spacing:.1em;
+  cursor:pointer;box-shadow:3px 3px 0 var(--neon);transition:background .2s,color .2s;
+}
+.copy-btn:hover{background:var(--neon);color:var(--black);}
+footer{
+  text-align:center;padding:28px;
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:.72rem;letter-spacing:.18em;color:var(--neon);opacity:.3;
+  position:relative;z-index:2;
+}
+@keyframes fadeUp{from{opacity:0;transform:translateY(28px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.emoji-burst-container{position:fixed;inset:0;pointer-events:none;z-index:98;overflow:hidden;}
+.ebp{position:absolute;font-size:2rem;will-change:transform,opacity;}
+</style>
+</head>
+<body>
+
+<svg class="web-bg" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="#c77dff" stroke-width="1" fill="none">
+    <line x1="450" y1="0" x2="450" y2="900"/>
+    <line x1="0" y1="450" x2="900" y2="450"/>
+    <line x1="0" y1="0" x2="900" y2="900"/>
+    <line x1="900" y1="0" x2="0" y2="900"/>
+    <line x1="225" y1="0" x2="675" y2="900"/>
+    <line x1="675" y1="0" x2="225" y2="900"/>
+    <line x1="0" y1="225" x2="900" y2="675"/>
+    <line x1="0" y1="675" x2="900" y2="225"/>
+    <circle cx="450" cy="450" r="120"/>
+    <circle cx="450" cy="450" r="240"/>
+    <circle cx="450" cy="450" r="360"/>
+    <circle cx="450" cy="450" r="450"/>
+  </g>
+</svg>
+
+<div class="particles" id="particles"></div>
+
+<!-- ══ YES SCREEN ══ -->
+<div id="yes-screen">
+ 
+    <!-- Spinnweb Background für yes-screen -->
+<svg style="position:absolute;inset:0;width:100%;height:100%;opacity:.06;pointer-events:none;z-index:0;" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#c77dff" stroke-width="1" fill="none">
+      <line x1="450" y1="0" x2="450" y2="900"/>
+      <line x1="0" y1="450" x2="900" y2="450"/>
+      <line x1="0" y1="0" x2="900" y2="900"/>
+      <line x1="900" y1="0" x2="0" y2="900"/>
+      <line x1="225" y1="0" x2="675" y2="900"/>
+      <line x1="675" y1="0" x2="225" y2="900"/>
+      <line x1="0" y1="225" x2="900" y2="675"/>
+      <line x1="0" y1="675" x2="900" y2="225"/>
+      <circle cx="450" cy="450" r="120"/>
+      <circle cx="450" cy="450" r="240"/>
+      <circle cx="450" cy="450" r="360"/>
+      <circle cx="450" cy="450" r="450"/>
+    </g>
+  </svg>
+  <!-- Halftone dots -->
+  <div style="position:absolute;inset:0;background-image:radial-gradient(circle,rgba(199,125,255,.13) 1px,transparent 1px);background-size:20px 20px;pointer-events:none;z-index:0;"></div>
+  <!-- Partikel -->
+  <div id="yes-particles" style="position:absolute;inset:0;pointer-events:none;z-index:0;overflow:hidden;"></div>
+
+  <div class="yes-emoji">🕷️ 🎀 💘 🕸️ ✨</div>
+  <div class="yes-title">WIR SIND<br/>JETZT OFFIZIELL!</div>
+
+  <!--
+    ZUS BLOCK: gif sits on top, arrow below with tip pointing UP at gif,
+    "zus." label sits under the arrow tail.
+    To tweak positions, change these in :root above:
+      ‑‑arrow-w   (arrow width)
+      ‑‑arrow-mt  (gap/overlap between gif and arrow, negative = closer)
+      ‑‑zus-mt    (gap between arrow and "zus." text)
+      ‑‑zus-rot   (tilt of "zus." label)
+  -->
+  <div class="zus-block">
+    <img class="yes-gif"
+      src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExZXJnenpoN2h5eWk1N29qYzdiaGdjOG9yamVlMmQxYzdkYWZ6OTZseiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/BGRPAApS9nBmBAQjaF/giphy.gif"
+      alt="Knuddel GIF" />
+
+
+    <span class="zus-label" style="
+        align-self:flex-end;
+        margin-top:-20px;
+        margin-right:10px;
+        transform: translateX(22px) translateY(6px) rotate(36deg) scale(1.25);
+        font-size: clamp(1.1rem, 4vw, 1.6rem);
+        position:relative;
+        z-index:999999;
+        will-change:transform,opacity;
+        pointer-events:none;
+        animation:floatY 3.5s ease-in-out infinite;
+    ">zus. 💘</span>
+  </div>
+
+  <div class="yes-sub"> hdgdl 💕</div>
+  <div class="timestamp-box" id="timestampBox" style="display:none;"></div>
+</div>
+
+<!-- ══ HERO ══ -->
+<section class="page" id="hero">
+  <div class="badge">✦ von Shakya an ✦</div>
+
+
+  <!--
+    EMELY: <span class="e">E</span> is white+red+neon shadow (Bangers)
+           <span class="mely">MELY</span> is pink (Bangers)
+    Both are inline inside one Bangers h1 — no flex needed.
+  -->
+  <h1 class="hero-name"><span class="e">EMELY</span></h1>
+
+  <p class="hero-sub">🕷️ gehaulp es ist soweit... 🎀</p>
+  <p class="scroll-hint">↓ scwoll runter pwuo ↓</p>
+</section>
+
+<!-- ══ QUESTION ══ -->
+<section class="page" id="question">
+  <div class="comic-panel">
+    <div class="qlabel">✦ heh uhm... ✦</div>
+    <p class="qtext">
+      <em>Emely</em>, wollen wir das offiziell machen
+      und <em>fest zusammen sein?</em> 🌹
+    </p>
+  </div>
+
+  <img class="mascot-gif"
+    src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2MzMmkycjY1dmRybmJhbmxwbXdxaDhobml1Y25heDdkYjBhYzk3dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oM82dbSfE1EZEM9DFs/giphy.gif"
+    alt="Love gif small" />
+
+  <div class="btn-row">
+    <button id="yesBtn" onclick="handleYes()">YUP 💕</button>
+    <button id="noBtn" onclick="shrinkNo()">naur...</button>
+  </div>
+  <p class="shy-hint" id="shyHint">Das Nein schrumpft vor Angst… 🙈</p>
+</section>
+
+<!-- ══ LOVE NOTE ══ -->
+<section class="page" id="lovenote">
+  <p style="font-family:'Bangers',cursive;font-size:.85rem;letter-spacing:.32em;color:var(--yellow);">✦ ein MASSIVER Brief ✦</p>
+  <div class="note-card">
+    <div class="note-ribbon">💌 Nur für Emely</div>
+    <p class="note-body">
+        The Moon is beautiful, isn't it?<br/> 🌗🌹
+    </p>
+    <div class="note-divider"></div>
+    <p class="note-sign">— Soki 🕷️🎀</p>
+  </div>
+</section>
+
+<footer>von soki 🕷️ & 🎀 nur für dih, emeleh</footer>
+
+<script>
+/*
+  ╔══════════════════════════════════════╗
+  ║  DEV MODE — zum Testen              ║
+  ║  true  = kein Lock, frei testbar    ║
+  ║  false = einmalig, für immer gesperrt║
+  ╚══════════════════════════════════════╝
+*/
+const DEV_MODE = false; // ← auf false setzen wenn du fertig bist!
+
+const TS_KEY = 'emely_ja_timestamp';
+
+/* ── Particles ── */
+const pWrap = document.getElementById('particles');
+const syms = ['🌸','🕷️','🎀','💕','✨','🕸️','⭐','💜','🌹','💘'];
+for(let i = 0; i < 32; i++){
+  const s = document.createElement('div');
+  s.className = 'spark';
+  s.textContent = syms[Math.floor(Math.random()*syms.length)];
+  s.style.cssText = `left:${Math.random()*100}vw;font-size:${.65+Math.random()*1.1}rem;animation-duration:${7+Math.random()*12}s;animation-delay:${Math.random()*15}s;`;
+  pWrap.appendChild(s);
+}
+/* ── Partikel auch im yes-screen ── */
+const yWrap = document.getElementById('yes-particles');
+for(let i = 0; i < 32; i++){
+  const s = document.createElement('div');
+  s.className = 'spark';
+  s.textContent = syms[Math.floor(Math.random()*syms.length)];
+  s.style.cssText = `left:${Math.random()*100}%;font-size:${.65+Math.random()*1.1}rem;animation-duration:${7+Math.random()*12}s;animation-delay:${Math.random()*15}s;`;
+  yWrap.appendChild(s);
+}
+
+/* ── Timestamp ── */
+function formatDE(date){
+  return date.toLocaleDateString('de-DE',{weekday:'long',year:'numeric',month:'long',day:'numeric'})
+    +' — '
+    +date.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit',second:'2-digit'})
+    +' Uhr';
+}
+function showTimestamp(ts){
+  const box = document.getElementById('timestampBox');
+  box.textContent = '💘 Offiziell seit: '+formatDE(new Date(ts));
+  box.style.display = 'block';
+}
+
+/* ── On load: restore if already answered ── */
+const storedTs = localStorage.getItem(TS_KEY);
+if(storedTs && !DEV_MODE){
+  document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+  document.querySelector('footer').style.display = 'none';
+  window.scrollTo(0, 0);
+  document.body.style.overflow = 'hidden';
+  document.getElementById('yes-screen').classList.add('active');
+  showTimestamp(storedTs);
+}
+
+/* ── No shrink ── */
+let noCount = 0;
+const noPhrases = ['Nein…?','heule?','kdh','🥀','brosa','bye?','tmm',''];
+const shyTexts = [
+  'vertippt?','brooo','OKAY 😭',
+  'checke signale...','aur naurr es verschwindet','ou shii',
+  'es dippt asap','OK LOCK IN'
+];
+function shrinkNo(){
+  noCount++;
+  const noBtn = document.getElementById('noBtn');
+  const yesBtn = document.getElementById('yesBtn');
+  const hint = document.getElementById('shyHint');
+  hint.classList.add('show');
+  hint.textContent = shyTexts[Math.min(noCount-1, shyTexts.length-1)];
+  noBtn.style.fontSize = Math.max(0.42,1.4-noCount*0.14)+'rem';
+  noBtn.style.padding = Math.max(3,14-noCount*1.5)+'px '+Math.max(8,38-noCount*4)+'px';
+  noBtn.style.opacity = String(Math.max(0.15,1-noCount*0.12));
+  noBtn.style.borderColor = 'rgba(199,125,255,'+Math.max(0.1,1-noCount*.14)+')';
+  noBtn.style.color = 'rgba(199,125,255,'+Math.max(0.1,1-noCount*.14)+')';
+  noBtn.style.boxShadow = 'none';
+  if(noCount < noPhrases.length) noBtn.textContent = noPhrases[noCount];
+  const yFS = Math.min(3.2,1.9+noCount*0.22);
+  const yHP = Math.min(80,58+noCount*7);
+  yesBtn.style.fontSize = yFS+'rem';
+  yesBtn.style.padding = '16px '+yHP+'px';
+  yesBtn.style.boxShadow = '4px 4px 0 #fff,0 8px '+(34+noCount*6)+'px rgba(255,63,164,'+(0.55+noCount*0.05)+')';
+}
+
+/* ── Yes ── */
+function handleYes(){
+  const now = new Date().toISOString();
+  if(!DEV_MODE) localStorage.setItem(TS_KEY, now);
+  launchEmojiHearts();
+  setTimeout(()=>{
+    // Alle Seiten-Sections verstecken (aber Partikel + web-bg bleiben)
+    document.querySelectorAll('.page').forEach(p => p.style.display = 'none');
+    document.querySelector('footer').style.display = 'none';
+    // Scroll zurück nach oben damit yes-screen sauber beginnt
+    window.scrollTo(0, 0);
+    // body scroll sperren damit man nicht raus scrollt
+    document.body.style.overflow = 'hidden';
+    document.getElementById('yes-screen').classList.add('active');
+    showTimestamp(now);
+  }, 800);
+}
+
+/* ── 💘 Emoji burst ── */
+function launchEmojiHearts(){
+  const container = document.createElement('div');
+  container.className = 'emoji-burst-container';
+  document.body.appendChild(container);
+  const vw = window.innerWidth, vh = window.innerHeight;
+  for(let i = 0; i < 60; i++){
+    setTimeout(()=>{
+      const el = document.createElement('div');
+      el.className = 'ebp';
+      el.textContent = '💘';
+      const x = Math.random()*vw;
+      const y = vh*(.3+Math.random()*.7);
+      const size = 1.2+Math.random()*2;
+      const dur = 1200+Math.random()*1600;
+      const drift = (Math.random()-.5)*200;
+      el.style.left = x+'px';
+      el.style.top = y+'px';
+      el.style.fontSize = size+'rem';
+      el.animate([
+        {transform:'translateY(0) translateX(0) scale(1) rotate(0deg)',opacity:1},
+        {transform:`translateY(-${vh*.9}px) translateX(${drift}px) scale(.2) rotate(${Math.random()*360}deg)`,opacity:0}
+      ],{duration:dur,delay:Math.random()*400,easing:'ease-out',fill:'forwards'});
+      container.appendChild(el);
+      setTimeout(()=> el.remove(), dur+600);
+    }, i*28);
+  }
+  setTimeout(()=> container.remove(), 7000);
+}
+</script>
+</body>
+</html>
